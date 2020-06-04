@@ -129,3 +129,31 @@
 {"level":"info","message":"Listening on port 3001...","timestamp":"2020-05-31T16:39:53.303Z"}
 {"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-05-31T16:39:53.319Z"}
 {"message":"Unexpected token } in JSON at position 28","stack":"SyntaxError: Unexpected token } in JSON at position 28\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\body-parser\\lib\\read.js:121:18\n    at invokeCallback (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:224:16)\n    at done (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:213:7)\n    at IncomingMessage.onEnd (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:273:7)\n    at IncomingMessage.emit (events.js:228:7)\n    at endReadableNT (_stream_readable.js:1185:12)\n    at processTicksAndRejections (internal/process/task_queues.js:81:21)","expose":true,"statusCode":400,"status":400,"body":"{\n\t\"username\": \"kenjohnp\",\n\n}","type":"entity.parse.failed","level":"error","timestamp":"2020-05-31T16:40:05.097Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-01T06:49:30.700Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-01T06:49:30.717Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-01T06:56:47.726Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-01T06:56:47.750Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-02T00:34:45.521Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-02T00:34:45.591Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-02T10:18:55.753Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-02T10:18:55.932Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T10:35:16.294Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T10:35:16.343Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T11:33:30.717Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T11:33:30.735Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T12:06:24.400Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T12:06:24.417Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T14:25:11.984Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T14:25:12.006Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T14:26:33.789Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T14:26:33.807Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T14:29:46.797Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T14:29:46.814Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T14:33:34.471Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T14:33:34.488Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T14:34:12.435Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T14:34:12.456Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T14:39:55.391Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T14:39:55.408Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-03T15:35:40.032Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-03T15:35:40.048Z"}

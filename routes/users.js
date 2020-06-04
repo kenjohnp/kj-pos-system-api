@@ -1,5 +1,6 @@
 const { User, validateUser } = require("../models/user");
 const validate = require("../middleware/validate");
+const validateObjectId = require("../middleware/validateObjectId");
 const _ = require("lodash");
 const bcrypt = require("bcrypt");
 const express = require("express");
@@ -10,7 +11,7 @@ router.get("/", async (req, res) => {
   res.send(users);
 });
 
-router.post("/", validate(validateUser), async (req, res) => {
+router.post("/", async (req, res) => {
   let user = await User.findOne({ username: req.body.username });
   if (user) return res.status(400).send("Username already exists.");
 
@@ -29,7 +30,36 @@ router.post("/", validate(validateUser), async (req, res) => {
 
   await user.save();
 
-  res.send(_.pick(user, ["username", "firstname", "lastname", "isAdmin"]));
+  res.send(
+    _.pick(user, ["_id", "username", "firstname", "lastname", "isAdmin"])
+  );
+});
+
+router.put("/", validateObjectId, async (req, res) => {
+  const payload = { isAdmin: req.body.isAdmin };
+
+  if (req.body.password) {
+    const salt = await bcrypt.genSalt(10);
+    payload.password = await bcrypt.hash(req.body.password, salt);
+  }
+
+  const user = await User.findByIdAndUpdate(req.params.id, payload, {
+    new: true,
+  });
+
+  if (!user)
+    return res.status(404).send("The user with the given id was not found.");
+
+  res.send(user);
+});
+
+router.delete("/:id", validateObjectId, async (req, res) => {
+  const user = await User.findByIdAndRemove(req.params.id);
+
+  if (!user)
+    return res.status(404).send("The user with the given id was not found.");
+
+  res.send(user);
 });
 
 module.exports = router;

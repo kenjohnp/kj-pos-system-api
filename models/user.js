@@ -6,9 +6,9 @@ const config = require("config");
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
-    required: true,
-    minlength: 5,
-    maxlength: 50,
+    // required: true,
+    // minlength: 5,
+    // maxlength: 50,
   },
   password: {
     type: String,
@@ -18,12 +18,12 @@ const userSchema = new mongoose.Schema({
   },
   firstname: {
     type: String,
-    required: true,
+    // required: true,
     maxlength: 255,
   },
   lastname: {
     type: String,
-    required: true,
+    // required: true,
     maxlength: 255,
   },
   isAdmin: Boolean,
