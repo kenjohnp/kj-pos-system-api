@@ -8,10 +8,11 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const users = await User.find().select("-password -__v").sort("username");
+
   res.send(users);
 });
 
-router.post("/", async (req, res) => {
+router.post("/", validate(validateUser), async (req, res) => {
   let user = await User.findOne({ username: req.body.username });
   if (user) return res.status(400).send("Username already exists.");
 
@@ -35,8 +36,8 @@ router.post("/", async (req, res) => {
   );
 });
 
-router.put("/", validateObjectId, async (req, res) => {
-  const payload = { isAdmin: req.body.isAdmin };
+router.put("/:id", validateObjectId, async (req, res) => {
+  const payload = req.body;
 
   if (req.body.password) {
     const salt = await bcrypt.genSalt(10);
@@ -50,7 +51,9 @@ router.put("/", validateObjectId, async (req, res) => {
   if (!user)
     return res.status(404).send("The user with the given id was not found.");
 
-  res.send(user);
+  res.send(
+    _.pick(user, ["_id", "username", "firstname", "lastname", "isAdmin"])
+  );
 });
 
 router.delete("/:id", validateObjectId, async (req, res) => {
@@ -59,7 +62,20 @@ router.delete("/:id", validateObjectId, async (req, res) => {
   if (!user)
     return res.status(404).send("The user with the given id was not found.");
 
-  res.send(user);
+  res.send(
+    _.pick(user, ["_id", "username", "firstname", "lastname", "isAdmin"])
+  );
+});
+
+router.get("/:id", validateObjectId, async (req, res) => {
+  const user = await User.findOne({ _id: req.params.id });
+
+  if (!user)
+    return res.status(404).send("The user with the given id was not found.");
+
+  res.send(
+    _.pick(user, ["_id", "username", "firstname", "lastname", "isAdmin"])
+  );
 });
 
 module.exports = router;
