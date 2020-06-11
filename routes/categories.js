@@ -22,22 +22,18 @@ router.post("/", validate(validateCategory), async (req, res) => {
   res.send(category);
 });
 
-router.put(
-  "/:id",
-  [validateObjectId, validate(validateCategory)],
-  async (req, res) => {
-    const category = await Category.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+router.put("/:id", [validateObjectId], async (req, res) => {
+  const category = await Category.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
 
-    if (!category)
-      return res
-        .status(404)
-        .send("The category with the given id was not found.");
+  if (!category)
+    return res
+      .status(404)
+      .send("The category with the given id was not found.");
 
-    res.send(category);
-  }
-);
+  res.send(category);
+});
 
 router.delete("/:id", validateObjectId, async (req, res) => {
   const category = await Category.findByIdAndRemove(req.params.id);
