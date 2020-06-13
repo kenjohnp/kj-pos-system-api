@@ -1,10 +1,12 @@
 const validate = require("../middleware/validate");
 const validateObjectId = require("../middleware/validateObjectId");
+const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const { Product, validateProduct } = require("../models/product");
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   const products = await Product.find()
     .populate("category", "name")
     .sort({ description: 1 });
@@ -12,7 +14,7 @@ router.get("/", async (req, res) => {
   res.send(products);
 });
 
-router.post("/", validate(validateProduct), async (req, res) => {
+router.post("/", [auth, admin, validate(validateProduct)], async (req, res) => {
   const { barcode, description } = req.body;
 
   const existingBarcode = await Product.findOne({
@@ -38,7 +40,7 @@ router.post("/", validate(validateProduct), async (req, res) => {
 
 router.put(
   "/:id",
-  [validateObjectId, validate(validateProduct)],
+  [auth, admin, validateObjectId, validate(validateProduct)],
   async (req, res) => {
     const product = await Product.findByIdAndUpdate(
       { _id: req.params.id },
@@ -55,7 +57,7 @@ router.put(
   }
 );
 
-router.delete("/:id", validateObjectId, async (req, res) => {
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const product = await Product.findByIdAndRemove(req.params.id);
 
   if (!product)
@@ -64,7 +66,7 @@ router.delete("/:id", validateObjectId, async (req, res) => {
   res.send(product);
 });
 
-router.get("/:id", validateObjectId, async (req, res) => {
+router.get("/:id", [auth, validateObjectId], async (req, res) => {
   const product = await Product.findOne({ _id: req.params.id }).populate(
     "category",
     "name"

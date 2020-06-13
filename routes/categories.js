@@ -1,28 +1,34 @@
 const validate = require("../middleware/validate");
 const validateObjectId = require("../middleware/validateObjectId");
+const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const { Category, validateCategory } = require("../models/category");
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   const categories = await Category.find().sort({ name: 1 });
 
   res.send(categories);
 });
 
-router.post("/", validate(validateCategory), async (req, res) => {
-  let category = await Category.findOne({ name: req.body.name });
+router.post(
+  "/",
+  [auth, admin, validate(validateCategory)],
+  async (req, res) => {
+    let category = await Category.findOne({ name: req.body.name });
 
-  if (category) return res.status(400).send("Category Name already exists.");
+    if (category) return res.status(400).send("Category Name already exists.");
 
-  category = new Category({ name: req.body.name, enabled: req.body.enabled });
+    category = new Category({ name: req.body.name, enabled: req.body.enabled });
 
-  await category.save();
+    await category.save();
 
-  res.send(category);
-});
+    res.send(category);
+  }
+);
 
-router.put("/:id", [validateObjectId], async (req, res) => {
+router.put("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const category = await Category.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
@@ -35,7 +41,7 @@ router.put("/:id", [validateObjectId], async (req, res) => {
   res.send(category);
 });
 
-router.delete("/:id", validateObjectId, async (req, res) => {
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const category = await Category.findByIdAndRemove(req.params.id);
 
   if (!category)
@@ -46,7 +52,7 @@ router.delete("/:id", validateObjectId, async (req, res) => {
   res.send(category);
 });
 
-router.get("/:id", validateObjectId, async (req, res) => {
+router.get("/:id", [auth, validateObjectId], async (req, res) => {
   const category = await Category.findOne({ _id: req.params.id });
 
   if (!category)

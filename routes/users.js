@@ -1,18 +1,20 @@
 const { User, validateUser } = require("../models/user");
 const validate = require("../middleware/validate");
 const validateObjectId = require("../middleware/validateObjectId");
+const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const _ = require("lodash");
 const bcrypt = require("bcrypt");
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   const users = await User.find().select("-password -__v").sort("username");
 
   res.send(users);
 });
 
-router.post("/", validate(validateUser), async (req, res) => {
+router.post("/", [auth, admin, validate(validateUser)], async (req, res) => {
   let user = await User.findOne({ username: req.body.username });
   if (user) return res.status(400).send("Username already exists.");
 
@@ -36,7 +38,7 @@ router.post("/", validate(validateUser), async (req, res) => {
   );
 });
 
-router.put("/:id", validateObjectId, async (req, res) => {
+router.put("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const payload = req.body;
 
   if (req.body.password) {
@@ -56,7 +58,7 @@ router.put("/:id", validateObjectId, async (req, res) => {
   );
 });
 
-router.delete("/:id", validateObjectId, async (req, res) => {
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const user = await User.findByIdAndRemove(req.params.id);
 
   if (!user)
