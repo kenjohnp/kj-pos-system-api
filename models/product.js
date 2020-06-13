@@ -10,8 +10,9 @@ const productSchema = {
     required: true,
     max: 255,
   },
-  categoryId: {
+  category: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: "Category",
   },
   price: {
     type: Number,
@@ -30,9 +31,9 @@ const Product = mongoose.model("Product", productSchema);
 
 function validateProduct(product) {
   const schema = Joi.object({
-    barcode: Joi.string().label("Barcode"),
+    barcode: Joi.string().allow("").label("Barcode"),
     description: Joi.string().required().max(255).label("Description"),
-    categoryId: Joi.objectId().label("Category"),
+    category: Joi.objectId().label("Category"),
     price: Joi.number().required().label("Price"),
     inStock: Joi.number().required().label("In Stock"),
     criticalStock: Joi.number().label("Critical Stock"),
