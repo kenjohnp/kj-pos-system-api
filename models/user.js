@@ -29,10 +29,10 @@ const userSchema = new mongoose.Schema({
   isAdmin: Boolean,
 });
 
-userSchema.methods.generateAuthToken = () => {
+userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign(
     {
-      _id: this.id,
+      _id: this._id,
       username: this.username,
       isAdmin: this.isAdmin,
     },
