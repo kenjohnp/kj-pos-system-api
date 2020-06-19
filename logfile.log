@@ -344,3 +344,132 @@
 {"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T15:58:51.194Z"}
 {"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:05:06.516Z"}
 {"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:05:06.531Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:49:26.061Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:49:26.077Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:51:00.845Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:51:00.861Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:52:38.549Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:52:38.606Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:53:41.521Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:53:41.555Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:55:49.285Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:55:49.312Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:56:11.377Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:56:11.399Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:56:23.128Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:56:23.178Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T16:57:38.423Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T16:57:38.442Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T17:00:10.850Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T17:00:10.868Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T17:01:30.358Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T17:01:30.375Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T17:05:12.954Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T17:05:12.970Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T17:07:06.028Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T17:07:06.044Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-14T17:07:33.579Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-14T17:07:33.594Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-15T14:20:10.632Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-15T14:20:10.675Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-15T17:42:27.934Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-15T17:42:27.974Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-16T09:22:10.613Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-16T09:22:10.662Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T08:56:10.351Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T08:56:10.433Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T09:43:18.737Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T09:43:18.756Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T09:54:09.227Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T09:54:09.243Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T09:55:40.567Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T09:55:40.582Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:02:23.094Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:02:23.109Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:02:41.297Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:02:41.312Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:05:44.720Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:05:44.736Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:08:33.345Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:08:33.360Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:09:02.683Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:09:02.698Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:10:24.655Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:10:24.672Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:10:41.305Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:10:41.327Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:10:46.942Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:10:46.961Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T10:15:09.162Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T10:15:09.198Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T11:57:07.268Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T11:57:07.284Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T12:59:19.462Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T12:59:19.491Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T13:00:28.450Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T13:00:28.468Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T13:00:57.485Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T13:00:57.505Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T13:01:30.632Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T13:01:30.652Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T13:02:50.258Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T13:02:50.280Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T13:03:25.288Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T13:03:25.309Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T13:10:20.336Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T13:10:20.352Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T15:55:11.524Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T15:55:11.541Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T15:55:55.780Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T15:55:55.814Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T15:56:15.106Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T15:56:15.129Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T15:58:11.527Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T15:58:11.543Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T15:59:57.075Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T15:59:57.134Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T16:03:25.906Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T16:03:25.927Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T16:08:13.805Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T16:08:13.823Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T16:09:05.861Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T16:09:05.882Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T16:09:50.932Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T16:09:50.953Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-17T16:10:03.352Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-17T16:10:03.369Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T08:19:30.019Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T08:19:30.059Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:33:43.927Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:33:43.945Z"}
+{"message":"Joi.email is not a function","stack":"TypeError: Joi.email is not a function\n    at validateSupplier (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\models\\supplier.js:41:16)\n    at C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\middleware\\validate.js:3:23\n    at newFn (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at module.exports (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\middleware\\admin.js:3:3)\n    at newFn (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at module.exports (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\middleware\\auth.js:11:5)\n    at newFn (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\route.js:137:13)\n    at Route.dispatch (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at newFn (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\express\\lib\\router\\layer.js:95:5)","level":"error","timestamp":"2020-06-19T09:39:13.651Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:40:26.091Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:40:26.124Z"}
+{"message":"Unexpected token } in JSON at position 41","stack":"SyntaxError: Unexpected token } in JSON at position 41\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\body-parser\\lib\\read.js:121:18\n    at invokeCallback (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:224:16)\n    at done (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:213:7)\n    at IncomingMessage.onEnd (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:273:7)\n    at IncomingMessage.emit (events.js:228:7)\n    at endReadableNT (_stream_readable.js:1185:12)\n    at processTicksAndRejections (internal/process/task_queues.js:81:21)","expose":true,"statusCode":400,"status":400,"body":"{\r\n    \"name\": \"The Pokemon Company\",\r\n\r\n}","type":"entity.parse.failed","level":"error","timestamp":"2020-06-19T09:41:48.674Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:42:56.496Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:42:56.519Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:43:28.051Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:43:28.073Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:44:06.869Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:44:06.894Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:44:13.499Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:44:13.524Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:45:04.958Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:45:04.987Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:45:13.860Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:45:13.892Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:45:42.798Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:45:42.826Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:46:14.984Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:46:15.031Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:46:21.395Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:46:21.452Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:46:23.043Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:46:23.062Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:46:41.435Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:46:41.462Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:47:21.010Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:47:21.049Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-06-19T09:47:32.487Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-06-19T09:47:32.515Z"}
+{"message":"Unexpected token } in JSON at position 39","stack":"SyntaxError: Unexpected token } in JSON at position 39\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\body-parser\\lib\\read.js:121:18\n    at invokeCallback (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:224:16)\n    at done (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:213:7)\n    at IncomingMessage.onEnd (C:\\Users\\KEN\\Documents\\Web Projects\\ks-pos-api\\node_modules\\raw-body\\index.js:273:7)\n    at IncomingMessage.emit (events.js:228:7)\n    at endReadableNT (_stream_readable.js:1185:12)\n    at processTicksAndRejections (internal/process/task_queues.js:81:21)","expose":true,"statusCode":400,"status":400,"body":"{\r\n    \"name\": \"The Pokemon Company\",\r\n}","type":"entity.parse.failed","level":"error","timestamp":"2020-06-19T09:48:30.948Z"}

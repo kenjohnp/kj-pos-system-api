@@ -3,6 +3,7 @@ const auth = require("../routes/auth");
 const users = require("../routes/users");
 const categories = require("../routes/categories");
 const products = require("../routes/products");
+const suppliers = require("../routes/suppliers");
 const error = require("../middleware/error");
 
 module.exports = (app) => {
@@ -11,5 +12,6 @@ module.exports = (app) => {
   app.use("/api/users", users);
   app.use("/api/categories", categories);
   app.use("/api/products", products);
+  app.use("/api/suppliers", suppliers);
   app.use(error);
 };
