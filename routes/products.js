@@ -17,10 +17,12 @@ router.get("/", auth, async (req, res) => {
 router.post("/", [auth, admin, validate(validateProduct)], async (req, res) => {
   const { barcode, description } = req.body;
 
-  const existingBarcode = await Product.findOne({
-    barcode,
-  });
-  if (existingBarcode) return res.status(400).send("Barcode already exists");
+  if (barcode !== "") {
+    const existingBarcode = await Product.findOne({
+      barcode,
+    });
+    if (existingBarcode) return res.status(400).send("Barcode already exists");
+  }
 
   let product = await Product.findOne({
     description,

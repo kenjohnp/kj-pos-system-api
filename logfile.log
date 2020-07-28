@@ -641,3 +641,21 @@
 {"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-07T11:55:43.607Z"}
 {"level":"info","message":"Initial user created.","timestamp":"2020-07-07T11:55:43.710Z"}
 {"level":"info","message":"user: admin, password: admin","timestamp":"2020-07-07T11:55:43.710Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-07T12:06:18.351Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-07T12:06:18.367Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:26:23.799Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:27:35.824Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-28T12:27:35.844Z"}
+{"level":"info","message":"Initial user created.","timestamp":"2020-07-28T12:27:35.955Z"}
+{"level":"info","message":"user: admin, password: admin","timestamp":"2020-07-28T12:27:35.956Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:28:50.279Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-28T12:29:17.370Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:29:23.302Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:34:10.347Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-28T12:34:10.365Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:37:09.677Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-28T12:37:09.708Z"}
+{"level":"info","message":"Initial user created.","timestamp":"2020-07-28T12:37:09.816Z"}
+{"level":"info","message":"user: admin, password: admin","timestamp":"2020-07-28T12:37:09.817Z"}
+{"level":"info","message":"Listening on port 3001...","timestamp":"2020-07-28T12:49:26.445Z"}
+{"level":"info","message":"Connected to mongodb://localhost/kjpos","timestamp":"2020-07-28T12:49:26.461Z"}
