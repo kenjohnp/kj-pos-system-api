@@ -31,6 +31,10 @@ const stockEntrySchema = {
     type: Date,
     required: true,
   },
+  refNo: {
+    type: String,
+    max: 50,
+  },
   remarks: {
     type: String,
     max: 255,
@@ -57,7 +61,6 @@ function validateStockEntry(stockEntry) {
         qty: Joi.number().min(1).required().label("Qty"),
       })
     ),
-    status: Joi.string().required(),
   });
 
   return schema.validate(stockEntry, { allowUnknown: true });
