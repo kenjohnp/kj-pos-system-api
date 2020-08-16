@@ -23,9 +23,14 @@ const stockEntrySchema = {
     required: true,
   },
   supplier: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Supplier",
-    required: true,
+    _id: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
   },
   date: {
     type: Date,
@@ -48,7 +53,12 @@ const StockEntry = mongoose.model("StockEntry", stockEntrySchema);
 function validateStockEntry(stockEntry) {
   const schema = Joi.object({
     stockInBy: Joi.string().required().label("Stock In By"),
-    supplier: Joi.objectId().required().label("Supplier"),
+    supplier: Joi.object({
+      _id: Joi.objectId().required().label("Supplier ID"),
+      name: Joi.string().required().label("Supplier Name"),
+    })
+      .required()
+      .label("Supplier"),
     date: Joi.date().required().label("Stock In Date"),
     remarks: Joi.string().allow("").label("Remarks"),
     items: Joi.array().items(

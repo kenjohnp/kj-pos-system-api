@@ -6,9 +6,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const stockEntries = await StockEntry.find()
-    .populate("supplier", "name")
-    .sort({ date: -1 });
+  const stockEntries = await StockEntry.find().sort({ date: -1 });
 
   res.send(stockEntries);
 });
