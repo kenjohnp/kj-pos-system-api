@@ -17,7 +17,20 @@ router.post(
   "/",
   [auth, admin, validate(validateStockEntry)],
   async (req, res) => {
-    const stockEntry = new StockEntry(req.body);
+    const { supplier, date, refNo, remarks } = req.body;
+
+    let stockEntry = {
+      supplier: {
+        _id: supplier._id,
+        name: supplier.name,
+      },
+      date,
+      refNo,
+      remarks,
+      status: "Added to Stock",
+    };
+
+    stockEntry = new StockEntry(stockEntry);
 
     await stockEntry.save();
 
