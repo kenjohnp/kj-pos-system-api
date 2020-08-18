@@ -44,6 +44,16 @@ router.put(
   "/:id",
   [auth, admin, validateObjectId, validate(validateProduct)],
   async (req, res) => {
+    const { barcode } = req.body;
+
+    if (barcode !== "") {
+      const existingBarcode = await Product.findOne({
+        barcode,
+      });
+      if (existingBarcode)
+        return res.status(400).send("Barcode already exists");
+    }
+
     const product = await Product.findByIdAndUpdate(
       { _id: req.params.id },
       req.body,
