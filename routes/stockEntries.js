@@ -58,7 +58,12 @@ router.post(
 );
 
 router.put("/:id", [auth, validateObjectId], async (req, res) => {
-  const stockEntry = await StockEntry.findByIdAndUpdate(
+  let stockEntry = await StockEntry.findById(req.params.id);
+
+  if (stockEntry.status === "Cancelled")
+    return res.status(400).send("Stock entry is already cancelled.");
+
+  stockEntry = await StockEntry.findByIdAndUpdate(
     { _id: req.params.id },
     {
       status: "Cancelled",
@@ -67,8 +72,6 @@ router.put("/:id", [auth, validateObjectId], async (req, res) => {
   );
 
   await stockEntry.save();
-
-  console.log(stockEntry);
 
   const productsToBeCancelled = stockEntry.items.map(
     async (i) =>
