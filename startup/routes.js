@@ -5,6 +5,7 @@ const categories = require("../routes/categories");
 const products = require("../routes/products");
 const suppliers = require("../routes/suppliers");
 const stockEntries = require("../routes/stockEntries");
+const transactions = require("../routes/transactions");
 const error = require("../middleware/error");
 
 module.exports = (app) => {
@@ -15,5 +16,6 @@ module.exports = (app) => {
   app.use("/api/products", products);
   app.use("/api/suppliers", suppliers);
   app.use("/api/stockentries", stockEntries);
+  app.use("/api/transactions", transactions);
   app.use(error);
 };
