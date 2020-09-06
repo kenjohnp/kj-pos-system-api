@@ -2,9 +2,13 @@ const auth = require("../middleware/auth");
 const validate = require("../middleware/validate");
 const { Counter } = require("../models/counter");
 const { Transaction, validateTransaction } = require("../models/transaction");
+const Fawn = require("fawn");
+const mongoose = require("mongoose");
 const moment = require("moment");
 const express = require("express");
 const router = express.Router();
+
+Fawn.init(mongoose);
 
 router.get("/", async (req, res) => {
   const transactions = await Transaction.find().sort({ transactionNo: -1 });
@@ -14,6 +18,11 @@ router.get("/", async (req, res) => {
 
 router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
   const transactionNo = await generateId();
+
+  const existingTransactionNo = await Transaction.find({ transactionNo });
+
+  if (existingTransactionNo.length)
+    return res.status(400).send("Duplicated Transaction No.");
 
   const { date, cashReceived, items } = req.body;
 
@@ -27,13 +36,40 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
     items,
   };
 
-  transaction = new Transaction(transaction);
+  const task = Fawn.Task();
 
-  await transaction.save();
+  task.save("transactions", transaction);
+  task.update(
+    "counters",
+    { counterType: "transaction" },
+    {
+      $inc: {
+        value: 1,
+      },
+    }
+  );
 
-  incrementId();
+  items.map((i) =>
+    task.update(
+      "products",
+      { _id: i.productId },
+      {
+        $inc: {
+          inStock: -i.qty,
+        },
+      }
+    )
+  );
 
-  res.send(transaction);
+  task
+    .run({ useMongoose: true })
+    .then(() => {
+      res.send(transaction);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send("Transaction failed.");
+    });
 });
 
 router.get("/generateId", [auth], async (req, res) => {
@@ -64,20 +100,6 @@ const generateId = async () => {
     String(counter.value).padStart(5, "0");
 
   return transactionId;
-};
-
-const incrementId = async () => {
-  counter = await Counter.findOneAndUpdate(
-    { counterType: "transaction" },
-    {
-      $inc: {
-        value: 1,
-      },
-    },
-    {
-      new: true,
-    }
-  );
 };
 
 const resetCounter = async () => {

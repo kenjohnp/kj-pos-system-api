@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 const Joi = require("@hapi/joi");
 
-const transactionItems = {
+const transactionItemsSchema = {
   barcode: {
     type: String,
   },
-  itemName: {
+  productId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+  },
+  description: {
     type: String,
     required: true,
   },
@@ -34,7 +38,7 @@ const transactionSchema = {
     type: Number,
     required: true,
   },
-  items: [transactionItems],
+  items: [transactionItemsSchema],
 };
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
@@ -47,6 +51,7 @@ function validateTransaction(transaction) {
         Joi.object({
           barcode: Joi.string().allow("").label("Barcode"),
           itemName: Joi.string().required().label("Item Name"),
+          productId: Joi.string().required().label("Product ID"),
           price: Joi.number().min(0).required().label("Price"),
           qty: Joi.number().min(1).required().label("Qty"),
           discount: Joi.number().min(0).required().label("Discount"),
@@ -58,7 +63,7 @@ function validateTransaction(transaction) {
     cashReceived: Joi.number().min(1).required().label("Cash Received"),
   });
 
-  return schema.validate(transaction);
+  return schema.validate(transaction, { allowUnknown: true });
 }
 
 exports.Transaction = Transaction;
