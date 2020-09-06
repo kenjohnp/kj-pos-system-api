@@ -60,7 +60,7 @@ function validateTransaction(transaction) {
       .min(1)
       .required()
       .label("Items"),
-    cashReceived: Joi.number().min(1).required().label("Cash Received"),
+    cashReceived: Joi.number().min(0).required().label("Cash Received"),
   });
 
   return schema.validate(transaction, { allowUnknown: true });

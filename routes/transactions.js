@@ -26,6 +26,10 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
 
   const { date, cashReceived, items } = req.body;
 
+  const validateDiscounts = items.find((i) => i.price < i.discount);
+
+  if (validateDiscounts) return res.status(400).send("Discount error.");
+
   if (!validateCashReceived(cashReceived, items))
     return res.status(400).send("Insufficient cash received.");
 
@@ -48,7 +52,6 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
       },
     }
   );
-
   items.map((i) =>
     task.update(
       "products",
@@ -116,7 +119,7 @@ const resetCounter = async () => {
 };
 
 const validateCashReceived = (cashReceived, items) => {
-  const totalAmount = items.reduce((a, b) => a + b.price, 0);
+  const totalAmount = items.reduce((a, b) => a + (b.price - b.discount), 0);
 
   if (cashReceived - totalAmount < 0) return false;
 
