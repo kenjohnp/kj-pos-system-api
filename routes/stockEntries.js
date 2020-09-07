@@ -4,6 +4,7 @@ const validate = require("../middleware/validate");
 const validateObjectId = require("../middleware/validateObjectId");
 const { StockEntry, validateStockEntry } = require("../models/stockEntry");
 const { Product } = require("../models/product");
+const Fawn = require("fawn");
 const express = require("express");
 const router = express.Router();
 
@@ -32,28 +33,31 @@ router.post(
       items,
     };
 
-    stockEntry = new StockEntry(stockEntry);
+    const task = Fawn.Task();
 
-    await stockEntry.save();
+    task.save("stockentries", stockEntry);
 
-    const products = req.body.items.map(
-      async (i) =>
-        await Product.findByIdAndUpdate(
-          { _id: i.productId },
-          {
-            $inc: {
-              inStock: i.qty,
-            },
+    const products = req.body.items.map((i) =>
+      task.update(
+        "products",
+        { _id: i.productId },
+        {
+          $inc: {
+            inStock: i.qty,
           },
-          {
-            new: true,
-          }
-        )
+        }
+      )
     );
 
-    stockEntry.items = products;
-
-    res.send(stockEntry);
+    task
+      .run({ useMongoose: true })
+      .then(() => {
+        stockEntry.items = products;
+        res.send(stockEntry);
+      })
+      .catch((err) => {
+        res.status(500).send("Stock entry failed.");
+      });
   }
 );
 

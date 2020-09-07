@@ -7,6 +7,7 @@ require("./startup/logging")();
 require("./startup/cors")(app);
 require("./startup/db")();
 require("./startup/initialize")();
+require("./startup/fawn")();
 require("./startup/routes")(app);
 require("./startup/config")();
 require("./startup/validation")();

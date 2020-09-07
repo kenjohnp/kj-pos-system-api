@@ -3,12 +3,9 @@ const validate = require("../middleware/validate");
 const { Counter } = require("../models/counter");
 const { Transaction, validateTransaction } = require("../models/transaction");
 const Fawn = require("fawn");
-const mongoose = require("mongoose");
 const moment = require("moment");
 const express = require("express");
 const router = express.Router();
-
-Fawn.init(mongoose);
 
 router.get("/", async (req, res) => {
   const transactions = await Transaction.find().sort({ transactionNo: -1 });
@@ -52,6 +49,7 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
       },
     }
   );
+
   items.map((i) =>
     task.update(
       "products",
@@ -70,7 +68,6 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
       res.send(transaction);
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).send("Transaction failed.");
     });
 });
