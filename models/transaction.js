@@ -39,6 +39,10 @@ const transactionSchema = {
     required: true,
   },
   items: [transactionItemsSchema],
+  totalSales: {
+    type: Number,
+    required: true,
+  },
 };
 
 const Transaction = mongoose.model("Transaction", transactionSchema);

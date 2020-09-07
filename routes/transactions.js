@@ -30,11 +30,19 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
   if (!validateCashReceived(cashReceived, items))
     return res.status(400).send("Insufficient cash received.");
 
+  const totalSales = items.reduce(
+    (a, b) => a + (b.price - b.discount) * b.qty,
+    0
+  );
+
+  console.log(totalSales);
+
   let transaction = {
     transactionNo,
     date,
     cashReceived,
     items,
+    totalSales,
   };
 
   const task = Fawn.Task();
