@@ -35,8 +35,6 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
     0
   );
 
-  console.log(totalSales);
-
   let transaction = {
     transactionNo,
     date,

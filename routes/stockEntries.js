@@ -51,9 +51,9 @@ router.post(
 
     task
       .run({ useMongoose: true })
-      .then(() => {
+      .then((results) => {
         stockEntry.items = products;
-        res.send(stockEntry);
+        res.send(results[0]);
       })
       .catch((err) => {
         res.status(500).send("Stock entry failed.");
