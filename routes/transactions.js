@@ -1,8 +1,10 @@
 const auth = require("../middleware/auth");
 const validate = require("../middleware/validate");
+const validateObjectId = require("../middleware/validateObjectId");
 const { Counter } = require("../models/counter");
 const { Transaction, validateTransaction } = require("../models/transaction");
 const Fawn = require("fawn");
+const mongoose = require("mongoose");
 const moment = require("moment");
 const express = require("express");
 const router = express.Router();
@@ -78,9 +80,34 @@ router.post("/", [auth, validate(validateTransaction)], async (req, res) => {
     });
 });
 
-router.get("/generateId", [auth], async (req, res) => {
-  const transactionId = await generateId();
-  res.send(transactionId);
+router.get("/:id", [auth], async (req, res) => {
+  if (req.params.id === "generateId") {
+    const transactionId = await generateId();
+    return res.send(transactionId);
+  }
+
+  if (!mongoose.Types.ObjectId.isValid(req.params.id))
+    return res.status(404).send("Invalid ID.");
+
+  const transaction = await Transaction.findById(req.params.id).lean().exec();
+
+  if (!transaction) return res.status(404).send("Transaction not found.");
+
+  const totalAmount = transaction.items.reduce(
+    (a, b) => a + b.qty * (b.price - b.discount),
+    0
+  );
+  const totalDiscount = transaction.items.reduce((a, b) => a + b.discount, 0);
+  const vat = totalAmount * 0.12;
+
+  transaction.amountSummary = {
+    totalAmount,
+    totalDiscount,
+    vat,
+    subTotal: totalAmount - vat,
+  };
+
+  res.send(transaction);
 });
 
 const generateId = async () => {
